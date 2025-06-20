@@ -26,6 +26,13 @@
 		9EE00BFD2E043F8400B90540 /* ShoeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE00BFC2E043F8400B90540 /* ShoeDetailView.swift */; };
 		9EE00C0F2E045C4B00B90540 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9EE00C0D2E045C4B00B90540 /* CoreDataModel.xcdatamodeld */; };
 		9EE00C112E045C9F00B90540 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE00C102E045C9F00B90540 /* CoreDataManager.swift */; };
+		9EE00C1F2E05255F00B90540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE00C1B2E05255F00B90540 /* Assets.xcassets */; };
+		9EE00C252E05307900B90540 /* HeadphonesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE00C242E05307900B90540 /* HeadphonesCard.swift */; };
+		9EE00C2B2E053E5F00B90540 /* WishListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE00C2A2E053E5F00B90540 /* WishListItem.swift */; };
+		9EE00C2E2E05723C00B90540 /* PlaceOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE00C2D2E05723C00B90540 /* PlaceOrderView.swift */; };
+		9EE00C372E05850E00B90540 /* AddressScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE00C352E05850E00B90540 /* AddressScreen.swift */; };
+		9EE00C3C2E0587BD00B90540 /* OrderConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE00C3B2E0587BD00B90540 /* OrderConfirmationView.swift */; };
+		9EE00C402E05A4DF00B90540 /* HelpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE00C3F2E05A4DF00B90540 /* HelpScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,38 +75,29 @@
 		9EE00BFC2E043F8400B90540 /* ShoeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDetailView.swift; sourceTree = "<group>"; };
 		9EE00C0E2E045C4B00B90540 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		9EE00C102E045C9F00B90540 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		9EE00C1B2E05255F00B90540 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9EE00C242E05307900B90540 /* HeadphonesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadphonesCard.swift; sourceTree = "<group>"; };
+		9EE00C2A2E053E5F00B90540 /* WishListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListItem.swift; sourceTree = "<group>"; };
+		9EE00C2D2E05723C00B90540 /* PlaceOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderView.swift; sourceTree = "<group>"; };
+		9EE00C352E05850E00B90540 /* AddressScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressScreen.swift; sourceTree = "<group>"; };
+		9EE00C3B2E0587BD00B90540 /* OrderConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationView.swift; sourceTree = "<group>"; };
+		9EE00C3F2E05A4DF00B90540 /* HelpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9EE00B9F2E02DA8300B90540 /* Exceptions for "ECommerceAppTests" folder in "ECommerceApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Assets.xcassets,
-			);
-			target = 9EE00B6D2E02DA6F00B90540 /* ECommerceApp */;
-		};
-		9EE00BA02E02DA8300B90540 /* Exceptions for "ECommerceAppTests" folder in "ECommerceAppTests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Assets.xcassets,
-			);
-			target = 9EE00B7A2E02DA7100B90540 /* ECommerceAppTests */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9EE00B7E2E02DA7100B90540 /* ECommerceAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				9EE00B9F2E02DA8300B90540 /* Exceptions for "ECommerceAppTests" folder in "ECommerceApp" target */,
-				9EE00BA02E02DA8300B90540 /* Exceptions for "ECommerceAppTests" folder in "ECommerceAppTests" target */,
-			);
 			path = ECommerceAppTests;
 			sourceTree = "<group>";
 		};
 		9EE00B882E02DA7100B90540 /* ECommerceAppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ECommerceAppUITests;
+			sourceTree = "<group>";
+		};
+		9EE00C362E05850E00B90540 /* AddressScreen */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AddressScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -159,6 +157,7 @@
 				9EE00BEF2E040F4300B90540 /* Model */,
 				9EE00BEE2E040F3900B90540 /* ViewModel */,
 				9EE00BED2E040F3500B90540 /* View */,
+				9EE00C1B2E05255F00B90540 /* Assets.xcassets */,
 			);
 			path = ECommerceApp;
 			sourceTree = "<group>";
@@ -183,6 +182,7 @@
 				9EE00BF42E04356000B90540 /* PantCardView.swift */,
 				9EE00BF02E040FE200B90540 /* CategoryCard.swift */,
 				9EE00BAB2E02E8CD00B90540 /* ProductCard.swift */,
+				9EE00C242E05307900B90540 /* HeadphonesCard.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -219,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				9EE00BE92E03EA3B00B90540 /* AddToCartView.swift */,
+				9EE00C2C2E0571DB00B90540 /* Orders */,
 			);
 			path = CartScreen;
 			sourceTree = "<group>";
@@ -227,8 +228,37 @@
 			isa = PBXGroup;
 			children = (
 				9EE00BE72E03E83600B90540 /* ProfileScreen.swift */,
+				9EE00C3F2E05A4DF00B90540 /* HelpScreen.swift */,
+				9EE00C292E053E3C00B90540 /* LikedItems */,
+				9EE00C3A2E0587AB00B90540 /* Order */,
+				9EE00C362E05850E00B90540 /* AddressScreen */,
 			);
 			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		9EE00C292E053E3C00B90540 /* LikedItems */ = {
+			isa = PBXGroup;
+			children = (
+				9EE00C2A2E053E5F00B90540 /* WishListItem.swift */,
+			);
+			path = LikedItems;
+			sourceTree = "<group>";
+		};
+		9EE00C2C2E0571DB00B90540 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				9EE00C2D2E05723C00B90540 /* PlaceOrderView.swift */,
+				9EE00C352E05850E00B90540 /* AddressScreen.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		9EE00C3A2E0587AB00B90540 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				9EE00C3B2E0587BD00B90540 /* OrderConfirmationView.swift */,
+			);
+			path = Order;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +298,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				9EE00B7E2E02DA7100B90540 /* ECommerceAppTests */,
+				9EE00C362E05850E00B90540 /* AddressScreen */,
 			);
 			name = ECommerceAppTests;
 			packageProductDependencies = (
@@ -348,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE00C1F2E05255F00B90540 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,20 +408,26 @@
 				9EE00BF52E04356000B90540 /* PantCardView.swift in Sources */,
 				9EE00BA62E02DBB200B90540 /* Model.swift in Sources */,
 				9EE00C112E045C9F00B90540 /* CoreDataManager.swift in Sources */,
+				9EE00C402E05A4DF00B90540 /* HelpScreen.swift in Sources */,
 				9EE00B9D2E02DA7F00B90540 /* ECommerceAppApp.swift in Sources */,
 				9EE00BA42E02DAB100B90540 /* SearchView.swift in Sources */,
 				9EE00BAE2E02ED0A00B90540 /* ShirtCardView.swift in Sources */,
 				9EE00BA82E02DBD700B90540 /* CardView.swift in Sources */,
+				9EE00C2E2E05723C00B90540 /* PlaceOrderView.swift in Sources */,
 				9EE00BF92E043C6C00B90540 /* ShirtDetailView.swift in Sources */,
 				9EE00BE82E03E83600B90540 /* ProfileScreen.swift in Sources */,
+				9EE00C372E05850E00B90540 /* AddressScreen.swift in Sources */,
 				9EE00BFB2E043F1B00B90540 /* PantDetailView.swift in Sources */,
 				9EE00BA22E02DAA000B90540 /* HomeScreen.swift in Sources */,
 				9EE00BFD2E043F8400B90540 /* ShoeDetailView.swift in Sources */,
 				9EE00BEA2E03EA3B00B90540 /* AddToCartView.swift in Sources */,
 				9EE00BF12E040FE200B90540 /* CategoryCard.swift in Sources */,
 				9EE00C0F2E045C4B00B90540 /* CoreDataModel.xcdatamodeld in Sources */,
+				9EE00C252E05307900B90540 /* HeadphonesCard.swift in Sources */,
 				9EE00BAC2E02E8CD00B90540 /* ProductCard.swift in Sources */,
+				9EE00C2B2E053E5F00B90540 /* WishListItem.swift in Sources */,
 				9EE00BEC2E04042A00B90540 /* CategoryScreen.swift in Sources */,
+				9EE00C3C2E0587BD00B90540 /* OrderConfirmationView.swift in Sources */,
 				9EE00BB62E0304CE00B90540 /* ShoesCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

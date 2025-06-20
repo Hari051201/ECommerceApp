@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-
-
 import CoreData
 
 struct AddToCartView: View {
@@ -17,46 +15,46 @@ struct AddToCartView: View {
     ) var items: FetchedResults<CartItem>
 
     var body: some View {
-        VStack {
-            if items.isEmpty {
-            
-                Text("No products in the cart.")
-                    .font(.title3)
-                    .foregroundColor(.gray)
-                    .padding()
-            } else {
-                // Cart list
-                List(items) { item in
-                    VStack(spacing: 20) {
-                        VStack {
-                            Text(item.name ?? "")
-                                .font(.headline)
-                                .padding(.trailing, 20)
-                                .cornerRadius(10)
-
-                            Text(item.price ?? "")
-                                .font(.subheadline)
-
-                            Image(item.image ?? "")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 200)
-                                .cornerRadius(10)
-                                .shadow(radius: 5)
-                        }
+        NavigationStack {
+            VStack(spacing: 20) {
+                if items.isEmpty {
+                    Text("No products in the cart.")
+                        .font(.title3)
+                        .foregroundColor(.gray)
                         .padding()
-                        .frame(width: 350)
-                        .background(Color.white.opacity(0.9))
-                        .cornerRadius(15)
-                        .shadow(radius: 5)
+                } else {
+                    List {
+                        ForEach(items) { item in
+                            NavigationLink(destination: PlaceOrderView(item: item)) {
+                                VStack(spacing: 12) {
+                                    Image(item.image ?? "")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(height: 200)
+                                        .cornerRadius(10)
+                                        .shadow(radius: 4)
+
+                                    Text(item.name ?? "")
+                                        .font(.headline)
+
+                                    Text(item.price ?? "")
+                                        .font(.subheadline)
+                                        .foregroundColor(.gray)
+                                }
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .background(Color.white)
+                                .cornerRadius(12)
+                                .shadow(radius: 4)
+                            }
+                            .padding(.vertical, 8)
+                        }
                     }
-                    .padding()
+                    .listStyle(PlainListStyle())
                 }
-                .listStyle(PlainListStyle())
             }
+            .navigationTitle("Cart")
+            .background(Color.white.opacity(0.4))
         }
-        .navigationTitle("Cart")
-        .background(Color(.systemGroupedBackground))
     }
 }
-

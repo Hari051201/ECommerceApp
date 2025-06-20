@@ -71,7 +71,7 @@ struct ShirtListView: View {
         }
     }
 }
-import SwiftUI
+
 
 struct HorizontalScrollViewShirt: View {
     let products: [ProductShirt]

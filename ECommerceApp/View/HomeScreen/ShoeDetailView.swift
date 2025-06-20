@@ -11,6 +11,7 @@ struct ShoeDetailView: View {
     let product: ProductShoes
     
     @State private var isNavigate = false
+    @State private var isLiked = false
     var body: some View {
         NavigationStack {
             
@@ -22,12 +23,30 @@ struct ShoeDetailView: View {
                     VStack(spacing: 20) {
                         
                         VStack {
+                            ZStack(alignment: .topTrailing) {
+                            
                             Image(product.image)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(height: 350)
                                 .cornerRadius(12)
                                 .padding()
+                            Button(action: {
+                                isLiked.toggle()
+                                if isLiked {
+                                    CoreDataManager.shared.saveLikedItem(image: product.image, name: product.name, price: product.price, type: "Shoe")
+                                }
+                            }) {
+                                Image(systemName: isLiked ? "heart.fill" : "heart")
+                                    .foregroundColor(isLiked ? .red : .gray)
+                                    .padding(10)
+                                    .background(Color.white)
+                                    .clipShape(Circle())
+                                    .shadow(radius: 3)
+                            }
+                            .padding(.trailing, 24)
+                            .padding(.top, 24)
+                        }
                             
                             Text(product.name)
                                 .font(.title)

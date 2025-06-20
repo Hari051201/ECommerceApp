@@ -39,4 +39,20 @@ class CoreDataManager {
             print("❌ Failed to save: \(error)")
         }
     }
+    
+    func saveLikedItem(image: String, name: String, price: String, type: String) {
+        let LikedItems = LikedItems(context: context)
+        LikedItems.name = name
+        LikedItems.price = price
+        LikedItems.image = image
+        LikedItems.type = type
+        
+        do {
+            try context.save()
+            print("Liked item saved: \(name)")
+        } catch {
+            print("Failed to save liked item: \(error.localizedDescription)")
+        }
+    }
+
 }
