@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct TabBarView: View {
+    @Environment(\.managedObjectContext) private var viewContext
     var body: some View {
 //        let categories = sampleCategoriesViewPage
         let product: ProductShirt

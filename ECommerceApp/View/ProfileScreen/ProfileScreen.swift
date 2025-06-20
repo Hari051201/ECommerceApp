@@ -36,30 +36,29 @@ struct ProfileScreen: View {
                         
                         VStack(alignment: .leading, spacing: 15) {
                             HStack {
-                                Text("Name")
+                                Text("Name             Hari")
                                     .font(.headline)
                                 Spacer()
-                                TextField("Enter name", text: $name)
-                                    .multilineTextAlignment(.trailing)
+                                
                             }
 
                             HStack {
-                                Text("Email")
+                                Text("Email             hari10@gmail.com")
                                     .font(.headline)
-                                Spacer()
-                                TextField("Enter email", text: $email)
                                     .keyboardType(.emailAddress)
                                     .autocapitalization(.none)
                                     .multilineTextAlignment(.trailing)
+                                Spacer()
+                               
                             }
 
                             HStack {
-                                Text("Phone")
+                                Text("Phone          9484884484")
                                     .font(.headline)
-                                Spacer()
-                                TextField("Enter phone", text: $phoneNumber)
                                     .keyboardType(.phonePad)
                                     .multilineTextAlignment(.trailing)
+                                Spacer()
+                                
                             }
                         }
                         .padding(.horizontal, 20)
