@@ -13,6 +13,7 @@ import GoogleSignIn
 import GoogleSignInSwift
 import AuthenticationServices
 import CryptoKit
+import CoreData
  
 struct SignupScreen: View {
     
@@ -208,6 +209,20 @@ struct SignupScreen: View {
             }
         }
     }
+    
+//    func saveUserToCoreData(name: String, email: String, phone: String) {
+//        let user = UserProfile(context: viewContext)
+//        user.name = name
+//        user.email = email
+//        user.phone = phone
+//
+//        do {
+//            try viewContext.save()
+//            print("User saved to Core Data")
+//        } catch {
+//            print("Failed to save user: \(error)")
+//        }
+//    }
 }
  
 // MARK: - Apple Sign-In Manager (Stub)

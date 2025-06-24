@@ -12,10 +12,12 @@ struct AddressView: View {
     @State private var fullName: String = ""
     @State private var address: String = ""
     @State private var phone: String = ""
+    
     @State private var isOrderPlaced = false
+    @State private var navigateToStripe = false
 
     var body: some View {
-        NavigationStack {
+        NavigationView {
             VStack(spacing: 20) {
                 Text("Shipping Address")
                     .font(.title2)
@@ -31,21 +33,22 @@ struct AddressView: View {
                     .keyboardType(.phonePad)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
 
-                // Navigation Trigger
-                NavigationLink(destination: OrderConfirmationView(item: item, name: fullName, address: address, phone: phone), isActive: $isOrderPlaced) {
+                // Navigation to StripePaymentView
+                NavigationLink(destination: StripePaymentView(), isActive: $navigateToStripe) {
                     EmptyView()
                 }
 
                 Button(action: {
                     if !fullName.isEmpty && !address.isEmpty && !phone.isEmpty {
-                        // Save to shared manager
+                        // Save to shared manager (optional)
                         let manager = OrderManager.shared
                         manager.lastOrderedItem = item
                         manager.fullName = fullName
                         manager.shippingAddress = address
                         manager.phoneNumber = phone
 
-                        isOrderPlaced = true
+                        // Trigger navigation to payment
+                        navigateToStripe = true
                     }
                 }) {
                     Text("Confirm Order")

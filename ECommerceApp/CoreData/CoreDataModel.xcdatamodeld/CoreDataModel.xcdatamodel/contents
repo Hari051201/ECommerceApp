@@ -11,5 +11,9 @@
         <attribute name="price" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="UserProfile" representedClassName="UserProfile" syncable="YES" codeGenerationType="class"/>
+    <entity name="UserProfile" representedClassName="UserProfile" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+    </entity>
 </model>

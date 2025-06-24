@@ -11,8 +11,19 @@ import FirebaseAuth
 import Firebase
 import GoogleSignIn
 import GoogleSignInSwift
+import CoreData
 import AuthenticationServices
 import CryptoKit
+
+class UserSession: ObservableObject {
+    static let shared = UserSession()
+
+    @Published var name: String = ""
+    @Published var email: String = ""
+    @Published var phone: String = ""
+
+    private init() { }
+}
  
 struct LoginView: View {
     
@@ -109,6 +120,7 @@ struct LoginView: View {
                 TabBarView().environment(\.managedObjectContext, viewContext)
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
     
     // MARK: - Email Login
@@ -125,9 +137,39 @@ struct LoginView: View {
             }
             
             print("Login successful!")
+//            fetchUserFromCoreData(email: email)
             navigateToHomeFromEmail = true
         }
     }
+//    func fetchUserFromCoreData(email: String) {
+//        let fetchRequest: NSFetchRequest<UserProfile> = UserProfile.fetchRequest()
+//        fetchRequest.predicate = NSPredicate(format: "email == %@", email)
+//
+//        do {
+//            if let user = try viewContext.fetch(fetchRequest).first {
+//                UserSession.shared.name = user.name ?? ""
+//                UserSession.shared.email = user.email ?? ""
+//                UserSession.shared.phone = user.phone ?? ""
+//            }
+//        } catch {
+//            print("Error fetching user: \(error)")
+//        }
+//    }
+    
+    func saveUserToCoreData(name: String, email: String, phone: String) {
+        let user = UserProfile(context: viewContext)
+        user.name = name
+        user.email = email
+        user.phone = phone
+
+        do {
+            try viewContext.save()
+            print("✅ User saved")
+        } catch {
+            print("❌ Failed to save user: \(error)")
+        }
+    }
+
     
 
     

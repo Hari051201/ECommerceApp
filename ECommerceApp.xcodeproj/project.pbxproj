@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64C0A328C569F668E5EBD048 /* Pods_ECommerceApp_ECommerceAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C36C7592D61C301E94F589D /* Pods_ECommerceApp_ECommerceAppUITests.framework */; };
+		7115BDE32D499FDBE19CC579 /* Pods_ECommerceAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946BAC6EF94BF3E509936068 /* Pods_ECommerceAppTests.framework */; };
+		9ED6A3132E093B970000FF9D /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 9ED6A3122E093B970000FF9D /* Stripe */; };
+		9ED6A3152E093B970000FF9D /* StripeApplePay in Frameworks */ = {isa = PBXBuildFile; productRef = 9ED6A3142E093B970000FF9D /* StripeApplePay */; };
+		9ED6A3172E093B970000FF9D /* StripeCardScan in Frameworks */ = {isa = PBXBuildFile; productRef = 9ED6A3162E093B970000FF9D /* StripeCardScan */; };
+		9ED6A3192E093B970000FF9D /* StripeConnect in Frameworks */ = {isa = PBXBuildFile; productRef = 9ED6A3182E093B970000FF9D /* StripeConnect */; };
+		9ED6A31B2E093B970000FF9D /* StripeFinancialConnections in Frameworks */ = {isa = PBXBuildFile; productRef = 9ED6A31A2E093B970000FF9D /* StripeFinancialConnections */; };
+		9ED6A31D2E093B970000FF9D /* StripeIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 9ED6A31C2E093B970000FF9D /* StripeIdentity */; };
+		9ED6A31F2E093B970000FF9D /* StripePaymentSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 9ED6A31E2E093B970000FF9D /* StripePaymentSheet */; };
+		9ED6A3212E093B970000FF9D /* StripePayments in Frameworks */ = {isa = PBXBuildFile; productRef = 9ED6A3202E093B970000FF9D /* StripePayments */; };
+		9ED6A3232E093B970000FF9D /* StripePaymentsUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9ED6A3222E093B970000FF9D /* StripePaymentsUI */; };
+		9ED6A3322E094A470000FF9D /* StripePaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED6A3312E094A470000FF9D /* StripePaymentView.swift */; };
+		9ED6A3342E094D700000FF9D /* StripeCardField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED6A3332E094D700000FF9D /* StripeCardField.swift */; };
+		9ED6A3362E0952E50000FF9D /* StripeAuthContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED6A3352E0952E50000FF9D /* StripeAuthContext.swift */; };
 		9EE00B9D2E02DA7F00B90540 /* ECommerceAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE00B9A2E02DA7F00B90540 /* ECommerceAppApp.swift */; };
 		9EE00BA22E02DAA000B90540 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE00BA12E02DAA000B90540 /* HomeScreen.swift */; };
 		9EE00BA42E02DAB100B90540 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE00BA32E02DAB100B90540 /* SearchView.swift */; };
@@ -66,6 +80,7 @@
 		9EE00C8D2E05BD6400B90540 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 9EE00C8C2E05BD6400B90540 /* GoogleSignIn */; };
 		9EE00C8F2E05BD6400B90540 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9EE00C8E2E05BD6400B90540 /* GoogleSignInSwift */; };
 		9EE00C932E05BDF200B90540 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9EE00C922E05BDF200B90540 /* GoogleService-Info.plist */; };
+		AE2721963E949CCAC97C3B08 /* Pods_ECommerceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B9BA18BC8C1DC5C173839D /* Pods_ECommerceApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +101,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		224D692B4FB620AD34128FD5 /* Pods-ECommerceAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECommerceAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ECommerceAppTests/Pods-ECommerceAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		349575FEBE62783665E1836C /* Pods-ECommerceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECommerceApp.release.xcconfig"; path = "Target Support Files/Pods-ECommerceApp/Pods-ECommerceApp.release.xcconfig"; sourceTree = "<group>"; };
+		38B9BA18BC8C1DC5C173839D /* Pods_ECommerceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ECommerceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C36C7592D61C301E94F589D /* Pods_ECommerceApp_ECommerceAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ECommerceApp_ECommerceAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		705A2048291B6654730833D0 /* Pods-ECommerceApp-ECommerceAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECommerceApp-ECommerceAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ECommerceApp-ECommerceAppUITests/Pods-ECommerceApp-ECommerceAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		920BCBA33795141C6BB227FB /* Pods-ECommerceApp-ECommerceAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECommerceApp-ECommerceAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ECommerceApp-ECommerceAppUITests/Pods-ECommerceApp-ECommerceAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		946BAC6EF94BF3E509936068 /* Pods_ECommerceAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ECommerceAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ED6A3312E094A470000FF9D /* StripePaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripePaymentView.swift; sourceTree = "<group>"; };
+		9ED6A3332E094D700000FF9D /* StripeCardField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeCardField.swift; sourceTree = "<group>"; };
+		9ED6A3352E0952E50000FF9D /* StripeAuthContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeAuthContext.swift; sourceTree = "<group>"; };
 		9EE00B6E2E02DA6F00B90540 /* ECommerceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECommerceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE00B7B2E02DA7100B90540 /* ECommerceAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECommerceAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE00B852E02DA7100B90540 /* ECommerceAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECommerceAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +146,8 @@
 		9EE00C922E05BDF200B90540 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9EE00C942E05BE7100B90540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9EE00C952E05BEA600B90540 /* ECommerceApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ECommerceApp.entitlements; sourceTree = "<group>"; };
+		CD13AC4783A8780581055E2F /* Pods-ECommerceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECommerceApp.debug.xcconfig"; path = "Target Support Files/Pods-ECommerceApp/Pods-ECommerceApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EEBAB69D6D9B14DDB4DDB51A /* Pods-ECommerceAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECommerceAppTests.release.xcconfig"; path = "Target Support Files/Pods-ECommerceAppTests/Pods-ECommerceAppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -149,15 +176,23 @@
 				9EE00C742E05B86100B90540 /* FirebaseFunctions in Frameworks */,
 				9EE00C6C2E05B86100B90540 /* FirebaseDatabase in Frameworks */,
 				9EE00C5A2E05B86100B90540 /* FirebaseAnalyticsIdentitySupport in Frameworks */,
+				9ED6A31B2E093B970000FF9D /* StripeFinancialConnections in Frameworks */,
+				9ED6A3212E093B970000FF9D /* StripePayments in Frameworks */,
 				9EE00C842E05B86100B90540 /* FirebaseStorage in Frameworks */,
+				9ED6A3172E093B970000FF9D /* StripeCardScan in Frameworks */,
 				9EE00C5E2E05B86100B90540 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				9ED6A3132E093B970000FF9D /* Stripe in Frameworks */,
 				9EE00C682E05B86100B90540 /* FirebaseCore in Frameworks */,
 				9EE00C562E05B86100B90540 /* FirebaseAnalytics in Frameworks */,
 				9EE00C8F2E05BD6400B90540 /* GoogleSignInSwift in Frameworks */,
 				9EE00C7C2E05B86100B90540 /* FirebaseMLModelDownloader in Frameworks */,
 				9EE00C6E2E05B86100B90540 /* FirebaseDynamicLinks in Frameworks */,
 				9EE00C5C2E05B86100B90540 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				9ED6A3192E093B970000FF9D /* StripeConnect in Frameworks */,
+				9ED6A3152E093B970000FF9D /* StripeApplePay in Frameworks */,
+				9ED6A31F2E093B970000FF9D /* StripePaymentSheet in Frameworks */,
 				9EE00C642E05B86100B90540 /* FirebaseAuth in Frameworks */,
+				9ED6A31D2E093B970000FF9D /* StripeIdentity in Frameworks */,
 				9EE00C702E05B86100B90540 /* FirebaseFirestore in Frameworks */,
 				9EE00C722E05B86100B90540 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				9EE00C8D2E05BD6400B90540 /* GoogleSignIn in Frameworks */,
@@ -174,7 +209,9 @@
 				9EE00C622E05B86100B90540 /* FirebaseAppDistribution-Beta in Frameworks */,
 				9EE00C662E05B86100B90540 /* FirebaseAuthCombine-Community in Frameworks */,
 				9EE00C7E2E05B86100B90540 /* FirebaseMessaging in Frameworks */,
+				9ED6A3232E093B970000FF9D /* StripePaymentsUI in Frameworks */,
 				9EE00C7A2E05B86100B90540 /* FirebaseInstallations in Frameworks */,
+				AE2721963E949CCAC97C3B08 /* Pods_ECommerceApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7115BDE32D499FDBE19CC579 /* Pods_ECommerceAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,12 +227,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64C0A328C569F668E5EBD048 /* Pods_ECommerceApp_ECommerceAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B09F28E8FC27A8E62D883E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38B9BA18BC8C1DC5C173839D /* Pods_ECommerceApp.framework */,
+				6C36C7592D61C301E94F589D /* Pods_ECommerceApp_ECommerceAppUITests.framework */,
+				946BAC6EF94BF3E509936068 /* Pods_ECommerceAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9ED6A3302E0949A80000FF9D /* PaymentView */ = {
+			isa = PBXGroup;
+			children = (
+				9ED6A3312E094A470000FF9D /* StripePaymentView.swift */,
+				9ED6A3332E094D700000FF9D /* StripeCardField.swift */,
+				9ED6A3352E0952E50000FF9D /* StripeAuthContext.swift */,
+			);
+			path = PaymentView;
+			sourceTree = "<group>";
+		};
 		9EE00B652E02DA6F00B90540 = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +261,8 @@
 				9EE00B7E2E02DA7100B90540 /* ECommerceAppTests */,
 				9EE00B882E02DA7100B90540 /* ECommerceAppUITests */,
 				9EE00B6F2E02DA6F00B90540 /* Products */,
+				AF1BCACA0B2031983592270C /* Pods */,
+				6B09F28E8FC27A8E62D883E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,6 +287,7 @@
 				9EE00BEF2E040F4300B90540 /* Model */,
 				9EE00BEE2E040F3900B90540 /* ViewModel */,
 				9EE00BED2E040F3500B90540 /* View */,
+				9ED6A3302E0949A80000FF9D /* PaymentView */,
 				9EE00C962E05BFE900B90540 /* CoreData */,
 				9EE00C1B2E05255F00B90540 /* Assets.xcassets */,
 			);
@@ -359,6 +421,19 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		AF1BCACA0B2031983592270C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD13AC4783A8780581055E2F /* Pods-ECommerceApp.debug.xcconfig */,
+				349575FEBE62783665E1836C /* Pods-ECommerceApp.release.xcconfig */,
+				920BCBA33795141C6BB227FB /* Pods-ECommerceApp-ECommerceAppUITests.debug.xcconfig */,
+				705A2048291B6654730833D0 /* Pods-ECommerceApp-ECommerceAppUITests.release.xcconfig */,
+				224D692B4FB620AD34128FD5 /* Pods-ECommerceAppTests.debug.xcconfig */,
+				EEBAB69D6D9B14DDB4DDB51A /* Pods-ECommerceAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -366,6 +441,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9EE00B8F2E02DA7100B90540 /* Build configuration list for PBXNativeTarget "ECommerceApp" */;
 			buildPhases = (
+				4435579FF46E14E78972F07D /* [CP] Check Pods Manifest.lock */,
 				9EE00B6A2E02DA6F00B90540 /* Sources */,
 				9EE00B6B2E02DA6F00B90540 /* Frameworks */,
 				9EE00B6C2E02DA6F00B90540 /* Resources */,
@@ -405,6 +481,15 @@
 				9EE00C872E05B86100B90540 /* FirebaseVertexAI */,
 				9EE00C8C2E05BD6400B90540 /* GoogleSignIn */,
 				9EE00C8E2E05BD6400B90540 /* GoogleSignInSwift */,
+				9ED6A3122E093B970000FF9D /* Stripe */,
+				9ED6A3142E093B970000FF9D /* StripeApplePay */,
+				9ED6A3162E093B970000FF9D /* StripeCardScan */,
+				9ED6A3182E093B970000FF9D /* StripeConnect */,
+				9ED6A31A2E093B970000FF9D /* StripeFinancialConnections */,
+				9ED6A31C2E093B970000FF9D /* StripeIdentity */,
+				9ED6A31E2E093B970000FF9D /* StripePaymentSheet */,
+				9ED6A3202E093B970000FF9D /* StripePayments */,
+				9ED6A3222E093B970000FF9D /* StripePaymentsUI */,
 			);
 			productName = ECommerceApp;
 			productReference = 9EE00B6E2E02DA6F00B90540 /* ECommerceApp.app */;
@@ -414,6 +499,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9EE00B922E02DA7100B90540 /* Build configuration list for PBXNativeTarget "ECommerceAppTests" */;
 			buildPhases = (
+				CC6A157B341F9F5BFB3C0F68 /* [CP] Check Pods Manifest.lock */,
 				9EE00B772E02DA7100B90540 /* Sources */,
 				9EE00B782E02DA7100B90540 /* Frameworks */,
 				9EE00B792E02DA7100B90540 /* Resources */,
@@ -428,8 +514,6 @@
 				9EE00C362E05850E00B90540 /* AddressScreen */,
 			);
 			name = ECommerceAppTests;
-			packageProductDependencies = (
-			);
 			productName = ECommerceAppTests;
 			productReference = 9EE00B7B2E02DA7100B90540 /* ECommerceAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -438,6 +522,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9EE00B952E02DA7100B90540 /* Build configuration list for PBXNativeTarget "ECommerceAppUITests" */;
 			buildPhases = (
+				2939278C619FBF0454F9E83F /* [CP] Check Pods Manifest.lock */,
 				9EE00B812E02DA7100B90540 /* Sources */,
 				9EE00B822E02DA7100B90540 /* Frameworks */,
 				9EE00B832E02DA7100B90540 /* Resources */,
@@ -451,8 +536,6 @@
 				9EE00B882E02DA7100B90540 /* ECommerceAppUITests */,
 			);
 			name = ECommerceAppUITests;
-			packageProductDependencies = (
-			);
 			productName = ECommerceAppUITests;
 			productReference = 9EE00B852E02DA7100B90540 /* ECommerceAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -492,6 +575,7 @@
 			packageReferences = (
 				9EE00C522E05B86100B90540 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				9EE00C8B2E05BD6400B90540 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				9ED6A3112E093B970000FF9D /* XCRemoteSwiftPackageReference "stripe-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9EE00B6F2E02DA6F00B90540 /* Products */;
@@ -531,6 +615,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2939278C619FBF0454F9E83F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ECommerceApp-ECommerceAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4435579FF46E14E78972F07D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ECommerceApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC6A157B341F9F5BFB3C0F68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ECommerceAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9EE00B6A2E02DA6F00B90540 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -539,6 +692,7 @@
 				9EE00C512E05B54300B90540 /* CustomTextField.swift in Sources */,
 				9EE00BDD2E03E4C400B90540 /* TabView.swift in Sources */,
 				9EE00BF52E04356000B90540 /* PantCardView.swift in Sources */,
+				9ED6A3342E094D700000FF9D /* StripeCardField.swift in Sources */,
 				9EE00BA62E02DBB200B90540 /* Model.swift in Sources */,
 				9EE00C112E045C9F00B90540 /* CoreDataManager.swift in Sources */,
 				9EE00C462E05B34800B90540 /* SignupScreen.swift in Sources */,
@@ -547,10 +701,12 @@
 				9EE00BA42E02DAB100B90540 /* SearchView.swift in Sources */,
 				9EE00BAE2E02ED0A00B90540 /* ShirtCardView.swift in Sources */,
 				9EE00BA82E02DBD700B90540 /* CardView.swift in Sources */,
+				9ED6A3362E0952E50000FF9D /* StripeAuthContext.swift in Sources */,
 				9EE00C2E2E05723C00B90540 /* PlaceOrderView.swift in Sources */,
 				9EE00BF92E043C6C00B90540 /* ShirtDetailView.swift in Sources */,
 				9EE00BE82E03E83600B90540 /* ProfileScreen.swift in Sources */,
 				9EE00C372E05850E00B90540 /* AddressScreen.swift in Sources */,
+				9ED6A3322E094A470000FF9D /* StripePaymentView.swift in Sources */,
 				9EE00C432E05B31500B90540 /* LoginScreen.swift in Sources */,
 				9EE00BFB2E043F1B00B90540 /* PantDetailView.swift in Sources */,
 				9EE00BA22E02DAA000B90540 /* HomeScreen.swift in Sources */,
@@ -720,6 +876,7 @@
 		};
 		9EE00B902E02DA7100B90540 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD13AC4783A8780581055E2F /* Pods-ECommerceApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -730,6 +887,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ECommerceApp/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location acces is required to accept payments";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -751,6 +909,7 @@
 		};
 		9EE00B912E02DA7100B90540 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 349575FEBE62783665E1836C /* Pods-ECommerceApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -761,6 +920,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ECommerceApp/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location acces is required to accept payments";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -782,6 +942,7 @@
 		};
 		9EE00B932E02DA7100B90540 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 224D692B4FB620AD34128FD5 /* Pods-ECommerceAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -801,6 +962,7 @@
 		};
 		9EE00B942E02DA7100B90540 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEBAB69D6D9B14DDB4DDB51A /* Pods-ECommerceAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -820,6 +982,7 @@
 		};
 		9EE00B962E02DA7100B90540 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 920BCBA33795141C6BB227FB /* Pods-ECommerceApp-ECommerceAppUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -837,6 +1000,7 @@
 		};
 		9EE00B972E02DA7100B90540 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 705A2048291B6654730833D0 /* Pods-ECommerceApp-ECommerceAppUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -894,6 +1058,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9ED6A3112E093B970000FF9D /* XCRemoteSwiftPackageReference "stripe-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stripe/stripe-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 24.16.0;
+			};
+		};
 		9EE00C522E05B86100B90540 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -913,6 +1085,51 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9ED6A3122E093B970000FF9D /* Stripe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9ED6A3112E093B970000FF9D /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = Stripe;
+		};
+		9ED6A3142E093B970000FF9D /* StripeApplePay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9ED6A3112E093B970000FF9D /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripeApplePay;
+		};
+		9ED6A3162E093B970000FF9D /* StripeCardScan */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9ED6A3112E093B970000FF9D /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripeCardScan;
+		};
+		9ED6A3182E093B970000FF9D /* StripeConnect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9ED6A3112E093B970000FF9D /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripeConnect;
+		};
+		9ED6A31A2E093B970000FF9D /* StripeFinancialConnections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9ED6A3112E093B970000FF9D /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripeFinancialConnections;
+		};
+		9ED6A31C2E093B970000FF9D /* StripeIdentity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9ED6A3112E093B970000FF9D /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripeIdentity;
+		};
+		9ED6A31E2E093B970000FF9D /* StripePaymentSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9ED6A3112E093B970000FF9D /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripePaymentSheet;
+		};
+		9ED6A3202E093B970000FF9D /* StripePayments */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9ED6A3112E093B970000FF9D /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripePayments;
+		};
+		9ED6A3222E093B970000FF9D /* StripePaymentsUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9ED6A3112E093B970000FF9D /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripePaymentsUI;
+		};
 		9EE00C532E05B86100B90540 /* FirebaseAI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9EE00C522E05B86100B90540 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

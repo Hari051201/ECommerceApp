@@ -6,68 +6,88 @@
 //
 import SwiftUI
 import CoreData
+import Firebase
+import FirebaseAuth
+import PhotosUI
 
 struct ProfileScreen: View {
+    @ObservedObject var session = UserSession.shared
+    @Environment(\.managedObjectContext) private var viewContext
+
+    @AppStorage("isLoggedIn") var isLoggedIn: Bool = false
     @State private var name: String = ""
     @State private var email: String = ""
     @State private var phoneNumber: String = ""
-    
+    @State private var isNavigate = false
+
     @State private var isNavigateToWishlist = false
     @State private var isNavigateToOrders = false
     @State private var selectedItem: CartItem? = nil
-//    @State private var isNavigateToHelp = false
 
     @ObservedObject var orderManager = OrderManager.shared
 
+    // Profile image
+    @State private var selectedPhoto: PhotosPickerItem? = nil
+    @State private var profileImage: Image? = nil
+    @State private var profileUIImage: UIImage? = nil
+
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ScrollView {
                 VStack(spacing: 30) {
-                    
+
                     // MARK: - Profile Info
-                    VStack {
-                        Image(systemName: "person.crop.circle.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 120, height: 120)
-                            .clipShape(Circle())
-                            .overlay(Circle().stroke(Color.gray, lineWidth: 2))
-                            .shadow(radius: 4)
-                        
+                    VStack(spacing: 10) {
+                        if let image = profileImage {
+                            image
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 80, height: 80)
+                                .clipShape(Circle())
+                                .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+                                .shadow(radius: 4)
+                        } else {
+                            Image(systemName: "person.crop.circle.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 80, height: 80)
+                                .clipShape(Circle())
+                                .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+                                .shadow(radius: 4)
+                        }
+
+                        PhotosPicker(selection: $selectedPhoto, matching: .images) {
+                            Text("Change Photo")
+                                .font(.caption)
+                                .foregroundColor(.blue)
+                        }
+
                         VStack(alignment: .leading, spacing: 15) {
                             HStack {
-                                Text("Name             Hari")
+                                Text("Name:                Hari")
                                     .font(.headline)
                                 Spacer()
-                                
                             }
 
                             HStack {
-                                Text("Email             hari10@gmail.com")
+                                Text("Email:                hari10@gmail.com")
                                     .font(.headline)
-                                    .keyboardType(.emailAddress)
-                                    .autocapitalization(.none)
-                                    .multilineTextAlignment(.trailing)
                                 Spacer()
-                               
                             }
 
-                            HStack {
-                                Text("Phone          9484884484")
-                                    .font(.headline)
-                                    .keyboardType(.phonePad)
-                                    .multilineTextAlignment(.trailing)
-                                Spacer()
-                                
-                            }
+//                            HStack {
+//                                Text("Phone:   \(session.phone)")
+//                                    .font(.headline)
+//                                Spacer()
+//                            }
                         }
-                        .padding(.horizontal, 20)
+                        .padding(.top, 10)
                     }
                     .padding()
                     .background(Color.white.opacity(0.8))
                     .cornerRadius(15)
                     .shadow(radius: 5)
-                    
+
                     // MARK: - Navigation Links
                     NavigationLink(destination: WishListItem(), isActive: $isNavigateToWishlist) {
                         EmptyView()
@@ -89,7 +109,7 @@ struct ProfileScreen: View {
 
                     // MARK: - Buttons
                     VStack(spacing: 20) {
-                        
+
                         // Wishlist
                         Button(action: {
                             isNavigateToWishlist = true
@@ -99,7 +119,7 @@ struct ProfileScreen: View {
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 30, height: 30)
-                                
+
                                 Text("Wishlist")
                                     .foregroundColor(.black)
                                     .bold()
@@ -127,7 +147,7 @@ struct ProfileScreen: View {
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 30, height: 30)
-                                
+
                                 Text("Orders")
                                     .foregroundColor(.black)
                                     .bold()
@@ -140,11 +160,7 @@ struct ProfileScreen: View {
                         }
 
                         // Help
-//                        NavigationLink(destination: HelpScreen(), isActive: $isNavigateToHelp) {
-//                            EmptyView()
-//                        }
                         Button(action: {
-//                            isNavigateToHelp = true
                             print("Help tapped")
                         }) {
                             HStack {
@@ -165,8 +181,17 @@ struct ProfileScreen: View {
                         }
 
                         // Logout
+                        NavigationLink(destination: LoginView(), isActive: $isNavigate) {
+                            EmptyView()
+                        }
+
                         Button(action: {
-                            print("Logout tapped")
+                            do {
+                                try Auth.auth().signOut()
+                                isLoggedIn = false
+                            } catch {
+                                print("Logout failed: \(error.localizedDescription)")
+                            }
                         }) {
                             HStack {
                                 Image("logout")
@@ -188,8 +213,36 @@ struct ProfileScreen: View {
                 }
                 .padding()
                 .navigationTitle("Profile")
-                .navigationBarTitleDisplayMode(.inline)
+                .onAppear {
+                    fetchUserFromCoreData()
+                }
+                .onChange(of: selectedPhoto) { newItem in
+                    Task {
+                        if let data = try? await newItem?.loadTransferable(type: Data.self),
+                           let uiImage = UIImage(data: data) {
+                            profileUIImage = uiImage
+                            profileImage = Image(uiImage: uiImage)
+                        }
+                    }
+                }
             }
+        }
+    }
+
+    // MARK: - Fetch from Core Data
+    func fetchUserFromCoreData() {
+        let fetchRequest: NSFetchRequest<UserProfile> = UserProfile.fetchRequest()
+        do {
+            if let user = try viewContext.fetch(fetchRequest).first {
+                session.name = user.name ?? ""
+                session.email = user.email ?? ""
+                session.phone = user.phone ?? ""
+                print("✅ User loaded into session")
+            } else {
+                print("⚠️ No user found in Core Data")
+            }
+        } catch {
+            print("❌ Failed to fetch user: \(error)")
         }
     }
 }
